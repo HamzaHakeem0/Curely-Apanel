@@ -1,0 +1,26 @@
+.vertical-layout {
+  height: 100vh;
+
+  .sidebar {
+    width: 240px;  // fixed sidebar width
+    min-width: 240px;
+    background-color:#00193c;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .header {
+      height: 64px;  // fixed header height
+      flex-shrink: 0;
+    }
+
+    .content {
+      flex-grow: 1;
+      overflow-y: auto; // scroll if content overflows
+      background-color: #f8f9fa; // light background
+    }
+  }
+}

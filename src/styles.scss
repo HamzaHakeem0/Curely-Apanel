@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+$primary-navy: #00193c;
+$primary-container: #002d62;
+$white: #ffffff;
+
+.btn-portal {
+  // 1. DYNAMIC WIDTH & FIXED HEIGHT
+  display: inline-flex;
+  width: auto;           // Dynamic width based on content
+  height: 43px;          // Fixed height (matches standard form input height)
+  min-width: 43px;      // Optional: ensures button isn't too tiny with short text
+  
+  // 2. CENTERING
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  
+  // 3. PADDING (Only Horizontal)
+  padding: 0 1rem;       // 0 for top/bottom, 2rem for left/right
+  
+  // 4. SHAPE & BORDER
+  border-radius: 5px; 
+  border: none;
+  
+  // 5. TYPOGRAPHY
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 540;
+  font-size: 1rem;
+  color: $white !important;
+  text-decoration: none;
+  white-space: nowrap;   // Prevents text from wrapping to a second line
+  
+  // 6. VISUALS
+  background: linear-gradient(135deg, $primary-container 0%, $primary-navy 100%);
+  box-shadow: 0 10px 20px -5px rgba(0, 25, 60, 0.3);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Icon handling
+  .material-symbols-outlined {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+    line-height: 1;      // Ensures icon stays centered vertically
+  }
+
+  // Hover States
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -5px rgba(0, 25, 60, 0.4);
+    filter: brightness(1.1);
+
+    .material-symbols-outlined {
+      transform: translateX(5px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}

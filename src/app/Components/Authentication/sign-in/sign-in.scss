@@ -1,0 +1,96 @@
+.left-section {
+  background: url('../../../../Assests/unnamed.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 40px;
+
+  display: flex;           // make left-section flex container
+  align-items: center;     // vertical center its child (.overlay-content)
+  justify-content: center; // horizontal center
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 40, 80, 0.85); // dark overlay
+  }
+
+  .overlay-content {
+    position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 320px;   // fixed height keeps card size
+  }
+
+  .info-card {
+    // background: rgba(255, 255, 255, 0.08);
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 550px;
+  }
+}
+
+.right-section {
+  background: #f8f9fb;
+
+  .login-box {
+    max-width: 380px;
+  }
+}
+
+.form-control {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.btn-dark {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.divider {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    top: 50%;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+.custom-form-field {
+  .mat-form-field-outline {
+    border-radius: 8px;       // similar to Bootstrap
+  }
+
+  .mat-form-field-infix {
+    padding: 0.375rem 0.75rem;  // Bootstrap input padding
+  }
+
+  input.mat-input-element {
+    height: 45px;             // match Bootstrap height
+  }
+
+  label.mat-form-field-label {
+    font-size: 0.875rem;      // Bootstrap label size
+  }
+}

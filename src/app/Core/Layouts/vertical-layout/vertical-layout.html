@@ -1,0 +1,19 @@
+<div class="vertical-layout d-flex vh-100">
+
+  <!-- Sidebar -->
+  <app-sidebar class="sidebar text-white"></app-sidebar>
+
+  <!-- Main content area -->
+  <div class="main-content flex-grow-1 d-flex flex-column">
+
+    <!-- Header -->
+    <app-header class="header border-bottom"></app-header>
+
+    <!-- Router outlet or content -->
+    <main class="content flex-grow-1 p-3 overflow-auto bg-light">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+  
+</div>
