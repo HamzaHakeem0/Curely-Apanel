@@ -1,0 +1,56 @@
+/* 🌌 Sidebar base (your exact color) */
+.sidebar-bg {
+  position: relative;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  background: #00193c;
+}
+
+/* ✨ Soft moving light effect */
+.sidebar-bg::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 153, 255, 0.15);
+  filter: blur(100px);
+  animation: softMove 10s infinite alternate ease-in-out;
+}
+
+/* 🎞 Animation */
+@keyframes softMove {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  100% {
+    transform: translate(200px, 300px);
+  }
+}
+
+/* 🧊 Glass touch (very subtle) */
+.nav {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* 🚀 Nav items */
+.nav-link {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+/* ✨ Hover (clean highlight) */
+.nav-link:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 🎯 Active (same theme, just brighter) */
+.nav-link.active {
+  background: rgba(0, 153, 255, 0.25);
+  box-shadow: inset 3px 0 0 #0099ff;
+}

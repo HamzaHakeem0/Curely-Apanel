@@ -12,8 +12,8 @@ export class Sidebar {
 
   activities = [
     { name: 'Dashboard', icon: 'bi bi-speedometer2', url: '/dashboard' },
-    { name: 'Patients', icon: 'bi bi-people', url: '/patients' },
-    { name: 'Schedule', icon: 'bi bi-calendar3', url: '/schedule' },
-    { name: 'Schedule', icon: 'bi bi-calendar3', url: '/schedule' },
+    { name: 'Patients', icon: 'bi bi-people', url: '/patient-history' },
+    { name: 'Assitant Linking', icon: 'bi bi-calendar3', url: '/assistant-linking' },
+    { name: 'Appointment', icon: 'bi bi-calendar3', url: '/appointment' },
   ];
 }

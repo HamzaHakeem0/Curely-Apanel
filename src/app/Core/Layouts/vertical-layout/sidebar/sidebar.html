@@ -1,14 +1,13 @@
-<ul class="nav flex-column">
-  <li
-    class="nav-item mb-2"
-    *ngFor="let activity of activities"
-  >
-    <a
-      class="nav-link text-white"
-      [routerLink]="activity.url"
-      routerLinkActive="active"
-    >
-      <i [class]="activity.icon"></i> {{ activity.name }}
-    </a>
-  </li>
-</ul>
+<div class="sidebar-bg">
+  <ul class="nav flex-column position-relative">
+    <li class="nav-item mb-2" *ngFor="let activity of activities">
+      <a
+        class="nav-link text-white"
+        [routerLink]="activity.url"
+        routerLinkActive="active"
+      >
+        <i [class]="activity.icon"></i> {{ activity.name }}
+      </a>
+    </li>
+  </ul>
+</div>

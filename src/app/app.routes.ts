@@ -1,12 +1,11 @@
 import { Routes } from '@angular/router';
-import { Empty } from './Core/Layouts/Empty/empty/empty';
-
 import { VerticalLayout } from './Core/Layouts/vertical-layout/vertical-layout';
+import { AuthLayout } from './Core/Layouts/Auth-Layout/auth-layout/auth-layout';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Empty,
+    component: AuthLayout,
     children: [
       {
         path: '',
@@ -37,17 +36,39 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'assistant',
+    path: 'appointment',
     component: VerticalLayout,
     children: [
       {
         path: '',
         loadComponent: () =>
-          import('./Components/assistant/assistant')
-            .then(c => c.Assistant)
+          import('./Components/appointment/appointment')
+            .then(c => c.Appointment)
       },
     ]
   },
-
-
+{
+    path: 'patient-history',
+    component: VerticalLayout,
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./Components/patint-history/patint-history')
+            .then(c => c.PatintHistory)
+      },
+    ]
+  },
+{
+    path: 'assistant-linking',
+    component: VerticalLayout,
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./Components/assistant-linking/assistant-linking')
+            .then(c => c.AssistantLinking)
+      },
+    ]
+  },
 ];

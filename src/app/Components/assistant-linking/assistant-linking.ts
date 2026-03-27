@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-assistant-linking',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './assistant-linking.html',
   styleUrl: './assistant-linking.scss',
 })
